@@ -1,0 +1,247 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto';
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    display: flex;
+    box-shadow: 0px 0px 6px 0px rgb(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 4vw;
+}
+
+.header-icon img {
+    height: 80px;
+    margin-right: 16px;
+}
+
+/* FOR FILTERS */
+
+.filter-section {
+    position: fixed;
+    top: 81px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    width: 99%;
+    margin-left: 1%;
+    flex-wrap: wrap;
+}
+
+.filter-section button {
+    font-family: 'Roboto';
+    font-weight: 700;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 4px 10px 4px 4px;
+    border: none;
+    box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 20%);
+    border-radius: 18px;
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+}
+
+.filter-section button:hover {
+    background-color: #E8E8E8;
+    box-shadow: none;
+}
+
+.filter-section button img {
+    height: 30px;
+    border-radius: 100%;
+    margin-right: 6px;
+}
+
+.active {
+    background-color: #ED7315 !important;
+}
+
+/* FOR IMAGE-SECTION */
+
+main {
+    position: absolute;
+    top: 142px;
+    z-index: -1;
+}
+
+.foto-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.foto-gallery img {
+    height: 200px;
+    margin: 8px;
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+}
+
+.foto-gallery img:hover {
+    opacity: 0.8;
+}
+
+/* FOR OVERLAY */
+
+.foto-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+.foto-overlay-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.overlay-img {
+    width: 85%;
+    max-height: 90%;
+    object-fit: cover;
+    margin-inline: 16px;
+}
+
+.close-overlay {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+    opacity: 0.5;
+    background-color: transparent;
+    transition: all 100ms ease-in-out;
+}
+
+.close-overlay:hover {
+    opacity: 1;
+}
+
+.previous-foto {
+    cursor: pointer;
+    opacity: 0.5;
+    background-color: transparent;
+    transition: all 100ms ease-in-out;
+}
+
+.previous-foto:hover {
+    opacity: 1;
+}
+
+.next-foto {
+    cursor: pointer;
+    opacity: 0.5;
+    background-color: transparent;
+    transition: all 100ms ease-in-out;
+}
+
+.next-foto:hover {
+    opacity: 1;
+}
+
+/* OTHERS */
+
+.stop-scolling {
+    overflow: hidden;
+}
+
+.margin-right {
+    margin-right: 16px;
+}
+
+.d-none {
+    display: none;
+}
+
+@media (max-width: 862px) {
+    main {
+        top: 180px;
+    }
+}
+
+@media (max-width: 800px) {
+    .previous-foto {
+        position: relative;
+        left: 60px;
+        opacity: 1;
+    }
+
+    .previous-foto:hover {
+        opacity: 0.5;
+    }
+
+    .next-foto {
+        position: relative;
+        right: 60px;
+        opacity: 1;
+    }
+
+    .next-foto:hover {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 650px) {
+    .foto-gallery img {
+        max-width: 98%;
+        object-fit: cover;
+    }
+
+    .header-icon {
+        margin-left: 4vw;
+    }
+
+    .overlay-img {
+        width: 98%;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .header-icon img {
+        height: 60px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 459px) {
+    main {
+        top: 218px;
+    }
+}
+
+@media (max-width: 303px) {
+    main {
+        top: 256px;
+    }
+}

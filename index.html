@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogalerie</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+
+<body id="body" onload="loadFotoGallery()">
+    <header id="header"><a href="#">
+            <div class="header-icon">
+                <img src="img/icon.png" alt="Icon">
+                <h1>Fotogalerie</h1>
+            </div>
+        </a>
+    </header>
+    <div class="filter-section">
+        <button onclick="showAll()" class="filter active"><img src="filter-img/all.jpg"><span>Alle</span></button>
+        <button onclick="showFilter('mountain-rock'); addActiveFilterToMountainRock()" class="filter"><img
+                src="filter-img/mountain-rock.jpg"><span>Berg/Fels</span></button>
+        <button onclick="showFilter('wood'); addActiveFilterToWood()" class="filter"><img
+                src="filter-img/wood.jpg"><span>Wald/Baum</span></button>
+        <button onclick="showFilter('sand'); addActiveFilterToSand()" class="filter"><img
+                src="filter-img/sand.jpg"><span>Sand</span></button>
+        <button onclick="showFilter('bridge'); addActiveFilterToBridge()" class="filter"><img
+                src="filter-img/bridge.jpg"><span>Brücke</span></button>
+        <button onclick="showFilter('meadow'); addActiveFilterToMeadow()" class="filter"><img
+                src="filter-img/meadow.jpg"><span>Wiese</span></button>
+        <button onclick="showFilter('water'); addActiveFilterToWater()" class="filter"><img
+                src="filter-img/water.jpg"><span>Wasser</span></button>
+        <button onclick="showFilter('snow'); addActiveFilterToSnow()" class="filter"><img
+                src="filter-img/snow.jpg"><span>Schnee</span></button>
+        <button onclick="showFilter('sunset'); addActiveFilterToSunset()" class="filter"><img
+                src="filter-img/sunset.jpg"><span>Sonne</span></button>
+    </div>
+    <main id="main">
+        <div class="foto-gallery" id="foto-gallery"></div>
+    </main>
+    <div id="foto-overlay">
+    </div>
+</body>
+
+</html>
